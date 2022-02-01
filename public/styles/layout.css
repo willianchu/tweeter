@@ -20,6 +20,13 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
 }
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #7c5500;
+  font-size: 36px;
+  font-weight: 300;
+  margin: 0;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

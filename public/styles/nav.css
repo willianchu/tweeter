@@ -1,5 +1,7 @@
 nav {
+  position: relative;
   height: 120px;
+  z-index: 5;
   background-color: #4056A1;
   color: #FFFFFF;
   display: flex;
@@ -13,6 +15,7 @@ nav {
   font-family: "Bungee", sans-serif;
   font-size: 2em;
   padding-top: 0.5em;
+  z-index: 5;
 }
 
 .nav-link, nav-logo {
@@ -23,8 +26,64 @@ nav p {
   display: flex;
   justify-content: center;
   margin: 0;
+  z-index: 5;
 }
 
+#myNav {
+  z-index: 1;
+}
+.overlay-content {
+  z-index: 1;
+}
+
+/* functions overlay nav bar */
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-toggler {
+      display: block;
+  }
+}
+
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(253, 173, 2);
+  background-color: rgb(253, 207, 2, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  z-index: 3;
+  position: absolute;
+  top: 2em;
+  right: 0.5em;
+  font-size: 60px;
+}
 
 
 
