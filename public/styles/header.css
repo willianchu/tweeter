@@ -1,14 +1,6 @@
-header {
+.overlay-content header {
   background-image: url(/images/foggy-birds.png);
   
   max-height: 520px;
   
-}
-
-header h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #FFFFFF;
-  font-size: 36px;
-  font-weight: 300;
-  margin: 0;
 }

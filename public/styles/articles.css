@@ -1,0 +1,33 @@
+article {
+  margin-top: 1em;
+  border: 0.21em solid #ccc;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 1em;
+
+}
+article header pre {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+article header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article header img {
+  width: 150px;
+  height: 150px;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+

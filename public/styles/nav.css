@@ -51,7 +51,7 @@ nav p {
   top: 0;
   left: 0;
   background-color: rgb(253, 173, 2);
-  background-color: rgb(253, 207, 2, 0.9);
+  background-color: rgba(189, 155, 4, 0.9);
   overflow-y: hidden;
   transition: 0.5s;
 }
