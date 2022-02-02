@@ -4,8 +4,13 @@ article {
   padding-left: 1em;
   padding-right: 1em;
   margin: 1em;
-
 }
+
+article:hover {
+  box-shadow: 5px 10px #888888;
+}
+
+
 article header pre {
   display: flex;
   justify-content: flex-start;
