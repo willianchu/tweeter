@@ -1,0 +1,13 @@
+#main-header {
+  height: 20%;
+  display: flex; /* loading.io/flexbox */
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(216, 167, 35, 0.712);
+  background-image: url(/images/foggy-birds.png);
+}
+
+

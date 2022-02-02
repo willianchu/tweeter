@@ -18,6 +18,8 @@
     <!-- All this to load a double arrow icon  :( -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
+    <!-- main Header -->
+    <link rel="stylesheet" href="styles/main-header.css" type="text/css" />
     <!-- nav CSS -->
     <link rel="stylesheet" href="styles/nav.css" type="text/css" />
     <!-- header CSS -->
@@ -40,6 +42,14 @@
   </head>
 
   <body>
+    <header id="main-header">
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>     
+      <div>
+          <h2>Willian Chu</h2>
+      </div>
+  </header>
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="nav-logo">
@@ -54,15 +64,21 @@
     <div id="myNav" class="overlay">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
-          <header>
-            <div>
-                <img src="/images/profile-hex.png"> 
-            </div>
-            <br>
-            <div>
-                <h2>Willian Chu</h2>
-            </div>
-        </header>
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form class="new-tweet-form" method="POST" action="/tweets/">
+            <!-- it will be necessary?
+              <label for="tweet-text">What are you humming about?</label>
+    
+             -->
+            <textarea placeholder="What are you humming about? " name="text" id="tweet-text"></textarea>
+            <hr>
+            <footer>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text" id="char-count"> 140 </output>
+            </footer>
+          </form>
+        </section>    
       </div>
     </div>
 
@@ -70,20 +86,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form class="new-tweet-form" method="POST" action="/tweets/">
-          <!-- it will be necessary?
-            <label for="tweet-text">What are you humming about?</label>
-
-           -->
-          <textarea placeholder="What are you humming about? " name="text" id="tweet-text"></textarea>
-          <hr>
-          <footer>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text" id="char-count"> 140 </output>
-          </footer>
-        </form>
+      
         
         <article>
           <header>
@@ -126,7 +129,48 @@
            
           </footer>
         </article>
-      </section>
+
+        <article>
+          <header>
+            <pre>
+              <img src="/images/profile-hex.png">
+              <h3>USER #2 Chu</h3>
+            </pre>
+            <h4>@WillianChu</h4>
+          </header>
+          <p> If I have seen further it is by standing on the shoulder of giants</p>
+
+          <hr>
+          <footer>
+            <!-- for future use reply button 
+            <p>
+              <span>
+                <i class="fa fa-share"></i>
+              </span>
+            </p>
+          -->
+            <p>
+              <span>
+                <i class="fa fa-clock-o"></i>
+              </span>
+              <span>
+                <i class="fa fa-calendar"></i>
+              </span>
+            </p>
+            <p>
+              <span>
+                <i class="fa fa-flag"></i>
+              </span>
+              <span>
+                <i class="fa fa-retweet"></i>
+              </span>
+              <span>
+                <i class="fa fa-heart"></i>
+              </span>
+            </p>
+           
+          </footer>
+        </article>
 
     </main>
     <!-- script nav bar overlay will be a separate file -->

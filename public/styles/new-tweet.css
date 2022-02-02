@@ -1,3 +1,6 @@
+.new-tweet{
+  padding: 1em;
+}
 .new-tweet textarea {
   width: 100%;
   height: 5em;
@@ -6,11 +9,12 @@
   padding: 10px;
   font-size: 16px;
   resize: none;
+
   
 }
 
 .new-tweet textarea::placeholder {
-  font-size: 24px;
+  font-size: 18px;
   color:black;
 }
 

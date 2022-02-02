@@ -52,7 +52,7 @@ font-family: Noe Display;
 .menu-wrap {
     width:100%;
     box-shadow:0px 1px 3px rgba(0,0,0,0.2);
-    background:#fa0032;
+    background:#3e3436;
 }
  
 .menu {
@@ -103,7 +103,7 @@ font-family: Noe Display;
  
 .sub-menu {
   display: none;
-    width: 300%;
+    width: 160%;
     padding: 5px 0px;
     position: absolute;
     top: 100%;
@@ -142,46 +142,38 @@ font-family: Noe Display;
 
 
 <div class="header">
+  <h2>fb</h2>
 
-     <div>
-          <img src="/images/profile-hex.png"> 
-      </div>     
-      <div>
-          <h2>Willian Chu</h2>
-      </div>
-  
 </div>
       <div id="navbar">
 <div class="menu-wrap">
 <nav class="menu">
   <ul class="clearfix">
-      <li>
-        <span>tweeter</span>
-      </li>
+      <li><a href="#">Home</a></li>
       <li>
           <a href="#">MENU1 <span class="arrow">&#9660;</span></a>
 
           <ul class="sub-menu">
-            
-            <section class="new-tweet">
-              <h2>Compose Tweet</h2>
-              <form class="new-tweet-form" method="POST" action="/tweets/">
-                <!-- it will be necessary?
-                  <label for="tweet-text">What are you humming about?</label>
-        
-                 -->
-                <textarea placeholder="What are you humming about? " name="text" id="tweet-text"></textarea>
-                <hr>
-                <footer>
-                  <button type="submit">Tweet</button>
-                  <output name="counter" class="counter" for="tweet-text" id="char-count"> 140 </output>
-                </footer>
-              </form>
-            </section> 
-
+              <li><a href="#">Some Text here</a></li>
+              <li><a href="#">Whatever you want</a></li>
+              <li><a href="#">Some Text</a></li>
+              <li><a href="#">Hello &amp; There</a></li>
           </ul>
       </li>
+      <li><a href="#">MENU2 <span class="arrow">&#9660;</span></a>
       
+          <ul class="sub-menu">
+              <li><a href="#">Text Menu2</a></li>
+              <li><a href="#">Text Menu2</a></li>
+              <li><a href="#">Text Menu2</a></li>
+              <li><a href="#">Hello &amp; Menu2</a></li>
+          </ul>
+      
+      
+      </li>
+      <li><a href="#">MENU3</a></li>
+      <li><a href="#">MENU4</a></li>
+      <li><a href="#">MENU5</a></li>
   </ul>
 </nav>
 </div>

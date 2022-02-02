@@ -1,6 +1,9 @@
 nav {
-  position: relative;
+  width: 100%;
   height: 120px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0; /* the top of the nav is at the top of the page */
   z-index: 5;
   background-color: #4056A1;
   color: #FFFFFF;
@@ -35,7 +38,9 @@ nav p {
 .overlay-content {
   z-index: 1;
 }
-
+#myNav.overlay{
+  margin-left: 5%;
+}
 /* functions overlay nav bar */
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-toggler {
@@ -45,22 +50,22 @@ nav p {
 
 .overlay {
   height: 0%;
-  width: 100%;
+  width: 90%;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(253, 173, 2);
-  background-color: rgba(189, 155, 4, 0.9);
+  background-color: rgb(241, 241, 241);
   overflow-y: hidden;
   transition: 0.5s;
+  margin-left: lenght(5%);
 }
 
 .overlay-content {
   position: relative;
   top: 25%;
   width: 100%;
-  text-align: center;
+  text-align: left;
   margin-top: 30px;
 }
 
