@@ -72,8 +72,9 @@ $(()=> {
     return $tweet;
   };
 
-  $('.tweet-form').on('submit', function(event) {
-    event.preventDefault();
+  $('#new-tweet-form').on('submit', function(event) {
+    event.preventDefault(); // prevents page from reloading
+    console.log( "the form has submmited");
     
   });
 
