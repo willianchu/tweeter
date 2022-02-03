@@ -48,7 +48,7 @@
   <body>
     <header id="main-header">
       <div>
-          <img src="/images/profile-hex.png"> 
+          <img id="main-photo" src="/images/profile-hex.png"> 
       </div>     
       <div>
           <h2>Willian Chu</h2>
@@ -69,7 +69,8 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
       <div class="overlay-content">
         <section class="new-tweet">
-          <h2>Compose Tweet</h2>
+          <button class="error">You have exceed the number of characters !</button>
+            <h2>Compose Tweet</h2>
           <form id="new-tweet-form" method="POST" action="/tweets/">
             <textarea placeholder="What are you humming about? " name="text" id="tweet-text"></textarea>
             <hr>
@@ -82,16 +83,15 @@
       </div>
     </div>
 
-
     <!-- Page-specific (main) content here -->
     <main class="container">
 
       <!-- tweets-container -->
       <div id="tweets-container"> </div>
           
-
+     
     </main>
-    <!-- script nav bar overlay will be a separate file -->
+    
       <script src="/scripts/nav-overlay.js"></script>
       <script src="/scripts/composer-char-counter.js"></script>
       <script src="/scripts/tweet-hover-state.js"></script>

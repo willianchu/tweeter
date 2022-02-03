@@ -31,6 +31,7 @@ article header img {
 }
 
 article footer {
+  color: #545149;
   display: flex;
   justify-content: space-between;
   align-items: center;

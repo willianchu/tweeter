@@ -29,6 +29,19 @@
   justify-content: space-between;
 }
 
+.new-tweet button.error{
+  display: none;
+  background-color:red;
+  color:rgb(255, 255, 255);
+  border-color:red;
+  border-width:1px;
+  border-style:solid;
+  border-radius:5px;
+  padding:5px;
+  font-size:0.9em;
+  font-weight:bold;
+  cursor:pointer;
+}
 .new-tweet button {
   background-color:#4056A1;
   color:rgb(255, 255, 255);
@@ -41,3 +54,4 @@
   font-weight:bold;
   cursor:pointer;
 }
+
