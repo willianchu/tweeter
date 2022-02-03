@@ -29,6 +29,18 @@ require("./lib/date-adjust")();
 // so it can define routes that use it to interact with the data layer.
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
+const tweetData = {
+  "user": {
+    "name": "Newton",
+    "avatars": "https://i.imgur.com/73hZDYK.png",
+      "handle": "@SirIsaac"
+    },
+  "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+  "created_at": 1461116232227
+};
+
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
