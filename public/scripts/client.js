@@ -24,12 +24,18 @@ $(()=> {
     });
   };
 
+  $(".error").hide(); // Hide error message (if any)
+  
+  
+
   const renderTweets = function(tweets) {
-    for (const tweetIndex in tweets) { // loops through tweets
+    $('#tweets-container').empty();
+    let arraySize = tweets.length - 1;
+    for (let tweetIndex = arraySize; tweetIndex > 0; tweetIndex--) { // loops through tweets
       const $tweet = createTweetElement(tweets[tweetIndex]); // calls createTweetElement for each tweet
       $('#tweets-container').append($tweet); // takes return value and appends it to the tweets container
     }
-    addListeners();
+    addListeners(); // ask to a tutor about this - I don´t have to rubish the old listeners?
   };
 
   const createTweetElement = function(tweetData) {
@@ -40,7 +46,7 @@ $(()=> {
     const $preId = $('<pre>').append($idImg, $name); // parent header-id
 
     const $marker = $('<h4>').text(`${tweetData.user.handle}`); // child 3
-    const $header = $('<header>').addClass('tweet-header').append($preId, $marker); 
+    const $header = $('<header>').addClass('tweet-header').append($preId, $marker);
     
     const $content = $('<p>').addClass('tweet-content').text(`${tweetData.content.text}`);
     const $hr = $('<hr>'); // child 4
@@ -78,31 +84,50 @@ $(()=> {
     
     if (parseFloat(caracterCount) < 0) {
       alert('You have exceeded the character limit');
-      $('input.error:button').css('display', 'inline');
+    
+      if ($(".error").is(":visible")) {
+        $(".error").hide();
+      } else {
+        $(".error").show();
+      }
     } else {
       const data = $("#new-tweet-form").serialize(); // serializes the form data
-      console.log(data);
-      $.ajax({
-        type: 'POST',
-        url: '/tweets',
-        data: data
-      }).done(function(data) {
-        console.log('data sent to server');
+      if (data === "" || data === "text=") {
+        alert('You have not entered a tweet');
+      } else {
         console.log(data);
+        $.ajax({
+          type: 'POST',
+          url: '/tweets',
+          data: data
+        }).done(function(data) {
+          console.log('data sent to server');
+          console.log(data);
+          loadTweets();
+          $('#new-tweet-form').trigger('reset'); // clears the form
+          $('#char-count').html(140); // resets the character count
+        
+        });
 
-      });
+      }
     }
     
   });
 
-  $.ajax({
-    url: '/tweets',
-    method: 'GET',
-  }).then((tweets) => {
-    renderTweets(tweets);
+  //Inside your client.js file and within the document ready function, define a function called loadTweets that is responsible for fetching tweets from the http://localhost:8080/tweets page.
 
-  });
+  const loadTweets = function() {
 
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+    }).then((tweets) => {
+      renderTweets(tweets);
+
+    });
+  };
+
+  loadTweets();
 
 });
  
