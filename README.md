@@ -1,6 +1,6 @@
 # Tweeter
 ## _Your Thoughts Connection_
-!["Logo"](https://github.com/willianchu/blob/master/docs/logotinyapp.jpg)
+!["Logo"](https://github.com/willianchu/tweeter/blob/master/docs/Readmelogo.jpg)
 
 > The multi screen design goal for Tweeter
 > breaks the limit of screens sizes,
@@ -17,11 +17,11 @@ Tweeter is a simple, single-page Twitter clone.
 
 ## Final Product
 
-!["Main Page"](https://github.com/willianchu//blob/master/docs/mainpage.jpg)
+!["Main Page"](https://github.com/willianchu/tweeter/blob/master/docs/maincourse.jpg)
 
-!["Editing links"](https://github.com/willianchu//blob/master/docs/editing.jpg)
+!["Narrow Devices"](https://github.com/willianchu/tweeter/blob/master/docs/Narrowdevice.jpg)
 
-!["Remember to login first"](https://github.com/willianchu/blob/master/docs/loginFirst.jpg)
+!["Catching Error"](https://github.com/willianchu/tweeter/blob/master/docs/Captura%20de%20tela%202022-02-03%20221425.jpg)
 
 ## Dependencies
 
