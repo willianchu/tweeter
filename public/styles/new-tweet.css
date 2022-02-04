@@ -1,5 +1,6 @@
 .new-tweet{
   padding: 1em;
+  box-shadow: 15px 15px #888888;
 }
 
 .new-tweet textarea {
@@ -20,16 +21,16 @@
 .new-tweet hr {
   height:4px;
   border-width:0;
-  color:rgb(0, 0, 0);
+  color:rgb(0, 0, 0); /* takes no really effect*/
   background-color:rgb(0, 0, 0)
 }
-
 .new-tweet footer {
   display: flex;
   justify-content: space-between;
 }
 
 .new-tweet button.error{
+  
   background-color:red;
   color:rgb(255, 255, 255);
   border-color:red;

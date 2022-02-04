@@ -1,69 +1,83 @@
-
 /* eslint-disable no-undef */
 // Test / driver code (temporary). Eventually will get this from the server.
 console.log('client.js is running');
 
 $(()=> {
-  const addListeners = () => { // listener for each Social Symbol
-    $('i.fa.fa-retweet').hover(function() { // hover over retweet 
+  const addListeners = () => { // listeners for each social icon
+    $('i.fa.fa-retweet').hover(function() {
       $(this).css("color", "darkgoldenrod");
     }, function() {
       $(this).css("color", "#545149");
     });
   
-    $('.fa-heart').hover(function() { // hover over heart
+    $('.fa-heart').hover(function() {
       $(this).css("color", "darkgoldenrod");
     }, function() {
       $(this).css("color", "#545149");
     });
 
-    $('.fa-flag').hover(function() { // hover over flag
+    $('.fa-flag').hover(function() {
       $(this).css("color", "darkgoldenrod");
     }, function() {
       $(this).css("color", "#545149");
     });
   };
 
-  $(".error").hide(); // Hide error message (if any) initially in new Tweet form
-   
-  const renderTweets = function(tweets) { // render tweets on page
+  $(".error").hide(); // Hide error message (if any)
+  
+  
+
+  const renderTweets = function(tweets) {
     $('#tweets-container').empty();
-    let arraySize = tweets.length - 1; // loops through tweets array
-    for (let tweetIndex = arraySize; tweetIndex > 0; tweetIndex--) { 
-      const $tweet = createTweetElement(tweets[tweetIndex]); //createTweetElement
-      $('#tweets-container').append($tweet); // appends tweets container
+    let arraySize = tweets.length - 1;
+    for (let tweetIndex = arraySize; tweetIndex > 0; tweetIndex--) { // loops through tweets
+      const $tweet = createTweetElement(tweets[tweetIndex]); // calls createTweetElement for each tweet
+      $('#tweets-container').append($tweet); // takes return value and appends it to the tweets container
     }
-    addListeners(); // rubish the old listeners?
+    addListeners(); // ask to a tutor about this - I don´t have to rubish the old listeners?
   };
 
-  const createTweetElement = function(tweetData) { // create tweet element
+  const createTweetElement = function(tweetData) {
+    // let $tweet = /* Your code for creating the tweet element */
+    
     const $idImg = $('<img>').addClass("id-img").attr('src',`${tweetData.user.avatars}`); // child 1
     const $name = $('<h3>').text(`${tweetData.user.name}`); // child 2
     const $preId = $('<pre>').append($idImg, $name); // parent header-id
+
     const $marker = $('<h4>').text(`${tweetData.user.handle}`); // child 3
     const $header = $('<header>').addClass('tweet-header').append($preId, $marker);
+    
     const $content = $('<p>').addClass('tweet-content').text(`${tweetData.content.text}`);
     const $hr = $('<hr>'); // child 4
+    
     const iflag = $('<i>').addClass('fa fa-flag'); // child 7
     const iretweet = $('<i>').addClass('fa fa-retweet'); // child 8
     const ilike = $('<i>').addClass('fa fa-heart'); // child 9
     const $footerIcons = $('<p>').addClass('footer-social').append(iflag, iretweet, ilike); // parent footer-icons
+
     const iClock = $('<i>').addClass('fa fa-clock-o'); // child 5
     const icalendar = $('<i>').addClass('fa fa-calendar').text(` ${timeago.format(tweetData.created_at)}`); // child 6
+
     const $footerTime = $('<p>').addClass('footer-time').append(iClock, icalendar); // parent footer-time
+
     const $footer = $('<footer>').addClass('tweet-footer').append($footerTime).append($footerIcons); // parent footer
+
     const $tweet = $('<article>').addClass('tweet'); // parent tweet
+
     $tweet.append($header, $content, $hr, $footer); // parent tweet
-    const $tweetsContainer = $('#tweets-container'); // catch tweets container
-    $tweetsContainer.append($tweet); // append tweet to tweets container
+
+    const $tweetsContainer = $('#tweets-container');
+
+    $tweetsContainer.append($tweet);
+      
     return $tweet;
   };
 
   $('#new-tweet-form').on('submit', function(event) {
     event.preventDefault(); // prevents page from reloading
-    const caracterCount = $('#char-count').html(); // get character count
+    const caracterCount = $('#char-count').html();
     if (parseFloat(caracterCount) < 0) {
-      if ($(".error").is(":visible")) { // toggle error message
+      if ($(".error").is(":visible")) {
         $(".error").hide();
       } else {
         $(".error").show();
@@ -78,6 +92,8 @@ $(()=> {
           url: '/tweets',
           data: data
         }).done(function(data) {
+          console.log('data sent to server');
+          console.log(data);
           loadTweets();
           $('#new-tweet-form').trigger('reset'); // clears the form
           $('#char-count').html(140); // resets the character count
@@ -97,7 +113,7 @@ $(()=> {
     });
   };
 
-  loadTweets(); // load tweets on page load first time.
+  loadTweets(); // loads first tweet
 
 });
  

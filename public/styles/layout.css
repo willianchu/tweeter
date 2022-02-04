@@ -15,7 +15,7 @@ html {
  */
 
 body {
-  min-width:700; /* minimum width of 1000px */
+  
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   background-color: #f4f1ec;
@@ -32,28 +32,17 @@ h2 {
 
 .floater {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: start;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  align-content: center;
-  background-color: #f4f1ec;
-  width: 60%;
 }
 
 /* Tablet: minimum width of 768px to maximum width of 1024px */
 @media only screen and (max-width: 768px) {
-  .floater {
-    flex-direction: column;
-  }
   .container {
     width: 100%;
+  }
+  .floater {
+    flex-direction: column;
   }
 }
 
@@ -63,11 +52,6 @@ h2 {
   }
   .container {
     width: 60%;
+    justify-content: flex-end;
   }
 }
-
-
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

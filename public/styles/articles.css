@@ -1,24 +1,9 @@
-article { 
-  width: 80%rem ;
+article {
   margin-top: 1em;
   border: 0.21em solid #ccc;
   padding-left: 1em;
   padding-right: 1em;
   margin: 1em;
-}
-
-#tweets-container {
-  display: flex; /* loading.io/flexbox */
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: space-between;
-  align-content: stretch;
-  width: 100% rem;
-}
-
-.tweet {
-  width: auto rem;
-  border: #545149 solid 3px;
 }
 
 article:hover {

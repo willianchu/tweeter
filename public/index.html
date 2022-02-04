@@ -46,7 +46,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <div class="nav-logo">
         <span>tweeter</span>
@@ -74,20 +73,22 @@
         </section>    
       </div>
     </div>
-    <div class="floater">
+    <div class = floater> <!-- Floats the content-->
       <header id="main-header">
-        <div id="main-photo-holder">
+        <div>
             <img id="main-photo" src="/images/profile-hex.png"> 
         </div>     
         <div>
             <h2>Willian Chu</h2>
         </div>
       </header>
-      <main class="container">  <!-- main container of tweets --->
+      <!-- Page-specific (main) content here -->
+      <div class="container">
+        <!-- tweets-container -->
         <div id="tweets-container"> </div>
-      </main>
-    </div> // <!-- end of floater -->
-    <script src="/scripts/nav-overlay.js"></script>
-    <script src="/scripts/composer-char-counter.js"></script>
-  </body>
+      </div>
+    </div>
+      <script src="/scripts/nav-overlay.js"></script>
+      <script src="/scripts/composer-char-counter.js"></script>
+    </body>
 </html>
