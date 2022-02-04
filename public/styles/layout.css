@@ -15,12 +15,13 @@ html {
  */
 
 body {
-  
+  min-width:700; /* minimum width of 1000px */
   font-family: 'Source Sans Pro', sans-serif;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
 }
+
 h2 {
   font-family: 'Source Sans Pro', sans-serif;
   color: #7c5500;
@@ -28,6 +29,44 @@ h2 {
   font-weight: 300;
   margin: 0;
 }
+
+.floater {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  background-color: #f4f1ec;
+  width: 60%;
+}
+
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (max-width: 768px) {
+  .floater {
+    flex-direction: column;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1920px) {
+  .floater {
+    flex-direction: row; 
+  }
+  .container {
+    width: 60%;
+  }
+}
+
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

@@ -1,6 +1,7 @@
 .new-tweet{
   padding: 1em;
 }
+
 .new-tweet textarea {
   width: 100%;
   height: 5em;
@@ -9,8 +10,6 @@
   padding: 10px;
   font-size: 16px;
   resize: none;
-
-  
 }
 
 .new-tweet textarea::placeholder {
@@ -21,16 +20,16 @@
 .new-tweet hr {
   height:4px;
   border-width:0;
-  color:rgb(0, 0, 0); /* takes no really effect*/
+  color:rgb(0, 0, 0);
   background-color:rgb(0, 0, 0)
 }
+
 .new-tweet footer {
   display: flex;
   justify-content: space-between;
 }
 
 .new-tweet button.error{
-  
   background-color:red;
   color:rgb(255, 255, 255);
   border-color:red;
@@ -42,6 +41,7 @@
   font-weight:bold;
   cursor:pointer;
 }
+
 .new-tweet button {
   background-color:#4056A1;
   color:rgb(255, 255, 255);

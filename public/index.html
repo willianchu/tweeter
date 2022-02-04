@@ -46,14 +46,6 @@
   </head>
 
   <body>
-    <header id="main-header">
-      <div>
-          <img id="main-photo" src="/images/profile-hex.png"> 
-      </div>     
-      <div>
-          <h2>Willian Chu</h2>
-      </div>
-  </header>
     <!-- Top nav bar (fixed) -->
     <nav>
       <div class="nav-logo">
@@ -82,17 +74,20 @@
         </section>    
       </div>
     </div>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-
-      <!-- tweets-container -->
-      <div id="tweets-container"> </div>
-          
-     
-    </main>
-    
-      <script src="/scripts/nav-overlay.js"></script>
-      <script src="/scripts/composer-char-counter.js"></script>
-    </body>
+    <div class="floater">
+      <header id="main-header">
+        <div id="main-photo-holder">
+            <img id="main-photo" src="/images/profile-hex.png"> 
+        </div>     
+        <div>
+            <h2>Willian Chu</h2>
+        </div>
+      </header>
+      <main class="container">  <!-- main container of tweets --->
+        <div id="tweets-container"> </div>
+      </main>
+    </div> // <!-- end of floater -->
+    <script src="/scripts/nav-overlay.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
+  </body>
 </html>
